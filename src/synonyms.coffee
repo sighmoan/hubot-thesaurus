@@ -33,7 +33,7 @@ module.exports = (robot) ->
             
             Object.keys(words).forEach (key, id) ->
               if(words[key][api_type])
-                synonyms = words[key][api_type].join(' ')
+                synonyms = words[key][api_type].slice(0,15).join(', ')
                 msg.send key+":"
                 msg.send synonyms
               else
