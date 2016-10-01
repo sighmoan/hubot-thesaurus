@@ -25,7 +25,7 @@ module.exports = (robot) ->
     msg.http("http://words.bighugelabs.com/api/2/"+THESAURUS_API_TOKEN+"/"+word+"/json")
         .get() (err, res, body) ->
           if(err)
-            msg.send "Eh, I don't really feel like it right now."
+            msg.send "Uh, can't access my thesauru- I mean, my very impressive internal memory of words."
             return
 
           if(body)
