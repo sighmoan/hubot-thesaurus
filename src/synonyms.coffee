@@ -1,5 +1,5 @@
 # Description:
-#   allows hubot to look up synonyms and antonyms for a given word.
+#   allows hubot to look up synonyms and antonyms for a given word. Uses BigHugeLabs API, which is free up to 1000 requests / day.
 #
 # Configuration:
 #   HUBOT_THESAURUS_API_TOKEN = must be a valid BigHugeLab's Thesaurus API token: https://words.bighugelabs.com/api.php
@@ -10,11 +10,6 @@
 #
 # Author:
 #   sighmoan
-
-pluralize = (word) ->
-  if(word.slice[-1] != 's')
-    return word+'s'
-  return word
 
 module.exports = (robot) ->
   THESAURUS_API_TOKEN = process.env.HUBOT_THESAURUS_API_TOKEN
